@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "utils",
+  "version": "${version}",
+
+  "name": "Utils",
+  "description": "A mod of mods",
+  "authors": [
+    "Nyanar"
+  ],
+
+
+  "license": "None",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "mod.nyanar.utils.Utils"
+    ]
+  },
+  "mixins": [
+    "modid.mixins.json"
+  ],
+
+  "depends": {
+    "fabricloader": ">=0.7.4",
+    "fabric": "*",
+    "minecraft": "1.16.x"
+  },
+  "suggests": {
+    "flamingo": "*"
+  }
+}
