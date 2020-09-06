@@ -1,27 +1,10 @@
 package mod.nyanar.utils.mixin;
 
-//import mod.nyanar.utils.itemgroup.ItemGroups;
-//import mod.nyanar.utils.registry.ItemRegister;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
-import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
-import net.minecraft.block.Block;
-import net.minecraft.block.Blocks;
-import net.minecraft.client.gui.screen.TitleScreen;
 import net.minecraft.item.*;
-import net.minecraft.util.Identifier;
 import net.minecraft.util.collection.DefaultedList;
-import net.minecraft.util.registry.Registry;
 import org.spongepowered.asm.mixin.Mixin;
-import org.spongepowered.asm.mixin.Shadow;
-import org.spongepowered.asm.mixin.injection.*;
-
-import java.lang.annotation.Retention;
-import java.lang.annotation.Target;
-
-import static java.lang.annotation.ElementType.METHOD;
-import static java.lang.annotation.RetentionPolicy.RUNTIME;
-//import static mod.nyanar.utils.registry.ItemRegister.register;
 
 @Mixin(targets = "net/minecraft/item/ItemGroup$1")
 public abstract class MixinBuildingGroup extends ItemGroup {
@@ -300,55 +283,4 @@ public abstract class MixinBuildingGroup extends ItemGroup {
     public ItemStack createIcon() {
         return new ItemStack(Items.DIAMOND);
     }*/
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-    /*@ModifyArg(
-            method = "<clinit>",
-            at = @At(value = "INVOKE", target = "Lnet/minecraft/item/Items;register(Lnet/minecraft/block/Block;Lnet/minecraft/item/ItemGroup;)Lnet/minecraft/item/Item;"),
-            index = 1,
-            slice = @Slice(
-                    from = @At(value = "FIELD", target = "Lnet/minecraft/item/Items;AIR:Lnet/minecraft/item/Item;", ordinal = 0),
-                    to = @At(value = "FIELD", target = "Lnet/minecraft/item/Items;STONE:Lnet/minecraft/item/Item;", ordinal = 0)
-            )
-    )
-    private static ItemGroup changeStoneGroup(ItemGroup original) {
-        return ItemGroup.BUILDING_BLOCKS;
-    }
-
-    @ModifyArg(
-            method = "<clinit>",
-            at = @At(value = "INVOKE", target = "Lnet/minecraft/item/Items;register(Lnet/minecraft/block/Block;Lnet/minecraft/item/ItemGroup;)Lnet/minecraft/item/Item;"),
-            index = 1,
-            slice = @Slice(
-                    from = @At(value = "FIELD", target = "Lnet/minecraft/item/Items;STONE:Lnet/minecraft/item/Item;", ordinal = 0),
-                    to = @At(value = "FIELD", target = "Lnet/minecraft/item/Items;GRANITE:Lnet/minecraft/item/Item;", ordinal = 0)
-            )
-    )
-    private static ItemGroup changeGraniteGroup(ItemGroup original) {
-        return ItemGroup.BUILDING_BLOCKS;
-    }
-
-    @ModifyArg(
-            method = "<clinit>",
-            at = @At(value = "INVOKE", target = "Lnet/minecraft/item/Items;register(Lnet/minecraft/block/Block;Lnet/minecraft/item/ItemGroup;)Lnet/minecraft/item/Item;"),
-            index = 1,
-            slice = @Slice(
-                    from = @At(value = "FIELD", target = "Lnet/minecraft/item/Items;SMOOTH_QUARTZ_SLAB:Lnet/minecraft/item/Item;", ordinal = 0),
-                    to = @At(value = "FIELD", target = "Lnet/minecraft/item/Items;GRANITE_SLAB:Lnet/minecraft/item/Item;", ordinal = 0)
-            )
-    )
-    private static ItemGroup changeGraniteSlabGroup(ItemGroup original) {
-        return ItemGroup.BUILDING_BLOCKS;
-    }*/
